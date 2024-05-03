@@ -60,15 +60,15 @@ const App = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <label htmlFor="name">Name:</label>
-        <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+        <input type="text" id="name" value={name} data-testId="name" onChange={(e) => setName(e.target.value)} />
         <span style={{ color: 'red' }}>{errors.name}</span><br/><br/>
 
         <label htmlFor="email">Email address:</label>
-        <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+        <input type="email" id="email" value={email} data-testid="email" onChange={(e) => setEmail(e.target.value)} />
         <span style={{ color: 'red' }}>{errors.email}</span><br/><br/>
 
         <label htmlFor="gender">Gender:</label>
-        <select id="gender" value={gender} onChange={(e) => setGender(e.target.value)}>
+        <select id="gender" value={gender} data-testid="gender" onChange={(e) => setGender(e.target.value)}>
           <option value="male">Male</option>
           <option value="female">Female</option>
           <option value="other">Other</option>
@@ -76,14 +76,14 @@ const App = () => {
         <span style={{ color: 'red' }}>{errors.gender}</span><br/><br/>
 
         <label htmlFor="phoneNumber">Phone Number:</label>
-        <input type="tel" id="phoneNumber" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
+        <input type="tel" id="phoneNumber" data-testid="phoneNumber" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} />
         <span style={{ color: 'red' }}>{errors.phoneNumber}</span><br/><br/>
 
         <label htmlFor="password">Password:</label>
-        <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+        <input type="password" id="password" data-testid="password" value={password} onChange={(e) => setPassword(e.target.value)} />
         <span style={{ color: 'red' }}>{errors.password}</span><br/><br/>
 
-        <button type="submit">Submit</button>
+        <button type="submit" data-testid="submit">Submit</button>
       </form>
     </div>
   );
